@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projectCards.forEach(card => {
         card.addEventListener('click', () => {
-            alert("Project clicked!");
+            const link = card.dataset.link;
+            if (link) {
+                window.open(link, "_blank");
+            }
         });
     });
-
-    // You could also add dark mode, form validation, scroll effects, etc.
 });
