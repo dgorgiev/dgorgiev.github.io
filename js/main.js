@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         fr: {
             hero: "Salut, je suis David 👋",
+            heroText: "Je suis étudiant en informatique à l'EPFL. J'aime comprendre et construire des trucs en partant de zéro.",
             about: "À propos de moi",
             aboutText: "Passionné par l'IA, les technologies quantiques et la robotique.",
             projects: "Petits projets",

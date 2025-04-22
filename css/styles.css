@@ -28,7 +28,7 @@ nav a {
 
 #lang-toggle {
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     right: 1rem;
 }
 
@@ -60,7 +60,7 @@ section {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    transition: transform 2s ease;
+    transition: transform 0.5s ease;
 }
 .project-card:hover {
     cursor: pointer;      /* changes arrow to hand */
