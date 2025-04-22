@@ -60,11 +60,17 @@ section {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    transition: transform 0.25s ease;
+    transition: transform 0.15s ease;
 }
 .project-card:hover {
     cursor: pointer;      /* changes arrow to hand */
     transform: scale(1.02); /* small zoom effect */
+}
+
+.icon {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
 }
 
 /* Responsive layout */

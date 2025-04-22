@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
             heroText: "Je suis étudiant en informatique à l'EPFL. J'aime comprendre et construire des trucs en partant de zéro.",
             about: "À propos de moi",
             aboutText: "Passionné par l'IA, les technologies quantiques et la robotique.",
-            projects: "Petits projets",
-            projectsText: "Did you know that if you follow iteratively the first link of (almost) any wikipedia page, you will at some point end up on the Philosophy wikipedia page ? This code automates it for you. Give it any wikipedia page and it will show you the path to the Philosophy wikipedia page!",
+            projects: "Petits Projets",
+            projectsText: "Saviez-vous qu'en suivant itérativement le premier lien de (presque) n'importe quelle page Wikipédia, vous finirez par tomber sur la page Wikipédia Philosophie? Ce programme automatise le processus. Donnez-lui n'importe quelle page Wikipédia et il vous indiquera le chemin vers la page Wikipédia Philosophie!",
             contact: "Contact & Liens"
         }
     };
