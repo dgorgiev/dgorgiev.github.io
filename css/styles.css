@@ -40,6 +40,10 @@ section {
     border: 1px solid #ddd;
     border-radius: 8px;
 }
+.project-card:hover {
+    cursor: pointer;      /* changes arrow to hand */
+    transform: scale(1.02); /* small zoom effect */
+}
 
 /* Responsive layout */
 @media (max-width: 600px) {
