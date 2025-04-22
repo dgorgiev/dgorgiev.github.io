@@ -60,7 +60,7 @@ section {
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
-    transition: transform 0.5s ease;
+    transition: transform 2s ease;
 }
 .project-card:hover {
     cursor: pointer;      /* changes arrow to hand */
