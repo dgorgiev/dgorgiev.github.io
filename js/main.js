@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#about h2").textContent = translations[currentLang].about;
         document.querySelector("#about p").textContent = translations[currentLang].aboutText;
         document.querySelector("#projects h2").textContent = translations[currentLang].projects;
-        document.querySelector("#projects h2").textContent = translations[currentLang].projectsText;
+        document.querySelector("#projects p").textContent = translations[currentLang].projectsText;
         document.querySelector("#contact h2").textContent = translations[currentLang].contact;
     });
 });
