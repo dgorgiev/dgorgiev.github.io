@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const translations = {
         en: {
             hero: "Hi, I'm David 👋",
+            heroText: "I’m a computer science student at EPFL. I like understanding and building stuff from scratch.",
             about: "About Me",
             aboutText: "Passionate about AI, quantum technologies, and robotics.",
             projects: "Small Projects",
+            projectsText: "Did you know that if you follow iteratively the first link of (almost) any wikipedia page, you will at some point end up on the Philosophy wikipedia page ? This code automates it for you. Give it any wikipedia page and it will show you the path to the Philosophy wikipedia page!",
             contact: "Contact & Links"
         },
         fr: {
@@ -29,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             about: "À propos de moi",
             aboutText: "Passionné par l'IA, les technologies quantiques et la robotique.",
             projects: "Petits projets",
+            projectsText: "Did you know that if you follow iteratively the first link of (almost) any wikipedia page, you will at some point end up on the Philosophy wikipedia page ? This code automates it for you. Give it any wikipedia page and it will show you the path to the Philosophy wikipedia page!",
             contact: "Contact & Liens"
         }
     };
@@ -39,9 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Update text content
         document.querySelector("#hero h1").textContent = translations[currentLang].hero;
+        document.querySelector("#hero p").textContent = translations[currentLang].heroText;
         document.querySelector("#about h2").textContent = translations[currentLang].about;
         document.querySelector("#about p").textContent = translations[currentLang].aboutText;
         document.querySelector("#projects h2").textContent = translations[currentLang].projects;
+        document.querySelector("#projects h2").textContent = translations[currentLang].projectsText;
         document.querySelector("#contact h2").textContent = translations[currentLang].contact;
     });
 });
