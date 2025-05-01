@@ -15,6 +15,29 @@ header, footer {
     padding: 1rem;
 }
 
+/*.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}*/
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+
+.indented {
+    margin-left: 1.5em;
+}
+
+
 nav ul {
     display: flex;
     gap: 1rem;

@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectCards = document.querySelectorAll('.project-card');
 
     projectCards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (event) => {
+            if (event.target.tagName.toLowerCase() === 'a') return;
             const link = card.dataset.link;
             if (link) {
                 window.open(link, "_blank");
@@ -17,37 +18,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const translations = {
         en: {
-            hero: "Hi, I'm David 👋",
-            heroText: "I’m a computer science student at EPFL. I like understanding and building stuff from scratch.",
-            about: "About Me",
-            aboutText: "Passionate about AI, quantum technologies, and robotics.",
-            projects: "Small Projects",
-            projectsText: "Did you know that if you follow iteratively the first link of (almost) any wikipedia page, you will at some point end up on the Philosophy wikipedia page ? This code automates it for you. Give it any wikipedia page and it will show you the path to the Philosophy wikipedia page!",
-            contact: "Contact & Links"
+            aboutHeader: "About",
+            projectsHeader: "Projects",
+            contactHeader: "Contact",
+            hero: "David Gorgiev",
+            about: "About me",
+            aboutText1: "I’m a computer science student at <a href=\"https://www.epfl.ch\" target=\"_blank\">EPFL</a>.",
+            interestIntro: "My main fields of interest are:",
+            interest1: "<strong>&bullet; Robotics:</strong> embedded systems, machine learning, computer vision",
+            interest2: "<strong>&bullet; Quantum technologies:</strong> quantum computers, entanglement, simulations, cryptography",
+            interest3: "<strong>&bullet; Coding</strong> in general.",
+            projects: "Projects",
+            projectsText: "Did you know that if you keep clicking the first link on a Wikipedia page, you'll most likely" +
+                " end up on the <a href=\"https://en.wikipedia.org/wiki/Philosophy\" target=\"_blank\">Philosophy</a> article? " +
+                "This code automates the process for you: just enter any Wikipedia page, and it will show you the path to the Philosophy page!",
+            contact: "Contact & links",
+            epflLink: "EPFL profile"
         },
         fr: {
-            hero: "Salut, je suis David 👋",
-            heroText: "Je suis étudiant en informatique à l'EPFL. J'aime comprendre et construire des trucs en partant de zéro.",
-            about: "À propos de moi",
-            aboutText: "Passionné par l'IA, les technologies quantiques et la robotique.",
-            projects: "Petits Projets",
-            projectsText: "Saviez-vous qu'en suivant itérativement le premier lien de (presque) n'importe quelle page Wikipédia, vous finirez par tomber sur la page Wikipédia Philosophie? Ce programme automatise le processus. Donnez-lui n'importe quelle page Wikipédia et il vous indiquera le chemin vers la page Wikipédia Philosophie!",
-            contact: "Contact & Liens"
+            aboutHeader: "À propos",
+            projectsHeader: "Projets",
+            contactHeader: "Contact",
+            hero: "David Gorgiev",
+            about: "À propos",
+            aboutText1: "Je suis étudiant en informatique à <a href=\"https://www.epfl.ch\" target=\"_blank\">l'EPFL</a>.",
+            interestIntro: "Mes principaux domaines d’intérêt sont :",
+            interest1: "<strong>&bullet; la Robotique</strong> : systèmes embarqués, machine learning, vision par ordinateur",
+            interest2: "<strong>&bullet; les Technologies Quantiques :</strong> ordinateurs quantiques, intrication, simulations, cryptographie",
+            interest3: "<strong>&bullet; la Programmation</strong> en général.",
+            projects: "Projets",
+            projectsText: "Saviez-vous qu'en cliquant successivement sur le premier lien d'une page Wikipédia, vous " +
+                "finirez probablement sur l'article <a href=\"https://fr.wikipedia.org/wiki/Philosophie\" target=\"_blank\">Philosophie</a> ? " +
+                "Ce code automatise ce processus : entrez simplement une page Wikipédia, et il vous montrera le chemin vers la page Philosophie !",
+            contact: "Contact & liens",
+            epflLink: "profil EPFL"
         }
     };
+
 
     langBtn.addEventListener("click", () => {
         currentLang = currentLang === "en" ? "fr" : "en";
         langBtn.textContent = currentLang === "en" ? "FR" : "EN";
 
-        // Update text content
-        document.querySelector("#hero h1").textContent = translations[currentLang].hero;
-        document.querySelector("#hero p").textContent = translations[currentLang].heroText;
-        document.querySelector("#about h2").textContent = translations[currentLang].about;
-        document.querySelector("#about p").textContent = translations[currentLang].aboutText;
-        document.querySelector("#projects h2").textContent = translations[currentLang].projects;
-        document.querySelector(".project-card p").textContent = translations[currentLang].projectsText;
-        document.querySelector("#contact h2").textContent = translations[currentLang].contact;
+        // Update all translatable elements
+        document.querySelectorAll("[data-key]").forEach(el => {
+            const key = el.getAttribute("data-key");
+            if (translations[currentLang][key]) {
+                el.innerHTML = translations[currentLang][key];
+            }
+        });
     });
 });
-
