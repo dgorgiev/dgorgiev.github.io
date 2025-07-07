@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hero: "David Gorgiev",
             about: "About me",
             aboutText1: "I’m a computer science student at <a href=\"https://www.epfl.ch\" target=\"_blank\">EPFL</a>.",
-            interestIntro: "My main fields of interest are algorithms, machine learning, embedded systems and quantum computing.",
+            interestIntro: "My main fields of interest are algorithms, machine learning, embedded systems and quantum computing, including signal processing and sensing.",
             projects: "Projects",
             projectsText: "Did you know that if you keep clicking the first link on a Wikipedia page, you'll most likely" +
                 " end up on the <a href=\"https://en.wikipedia.org/wiki/Philosophy\" target=\"_blank\">Philosophy</a> article? " +
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hero: "David Gorgiev",
             about: "À propos",
             aboutText1: "Je suis étudiant en informatique à <a href=\"https://www.epfl.ch\" target=\"_blank\">l'EPFL</a>.",
-            interestIntro: "Mes principaux domaines d’intérêt sont le machine learning, les algorithmes, les systèmes embarqués et l'informatique quantique.",
+            interestIntro: "Mes principaux domaines d’intérêt sont le machine learning, les algorithmes, les systèmes embarqués et l'informatique quantique, ainsi que le traitement de signal et les capteurs.",
             projects: "Projets",
             projectsText: "Saviez-vous qu'en cliquant successivement sur le premier lien d'une page Wikipédia, vous " +
                 "finirez probablement sur l'article <a href=\"https://fr.wikipedia.org/wiki/Philosophie\" target=\"_blank\">Philosophie</a> ? " +
