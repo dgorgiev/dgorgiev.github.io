@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const translations = {
         en: {
             aboutHeader: "About",
-            projectsHeader: "Personal projects",
+            projectsHeader: "Projects",
             contactHeader: "Contact",
             hero: "David Gorgiev",
             about: "About me",
             aboutText1: "I’m a computer science student at <a href=\"https://www.epfl.ch\" target=\"_blank\">EPFL</a>.",
             interestIntro: "My main fields of interest are algorithms, machine learning, embedded systems and quantum computing, including signal processing and sensing.",
-            projects: "Projects",
+            projects: "Personal projects",
             projectsText: "Did you know that if you keep clicking the first link on a Wikipedia page, you'll most likely" +
                 " end up on the <a href=\"https://en.wikipedia.org/wiki/Philosophy\" target=\"_blank\">Philosophy</a> article? " +
                 "This code automates the process for you: just enter any Wikipedia page, and it will show you the path to the Philosophy page!",
@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         fr: {
             aboutHeader: "À propos",
-            projectsHeader: "Projets personnels",
+            projectsHeader: "Projets",
             contactHeader: "Contact",
             hero: "David Gorgiev",
             about: "À propos",
             aboutText1: "Je suis étudiant en informatique à <a href=\"https://www.epfl.ch\" target=\"_blank\">l'EPFL</a>.",
             interestIntro: "Mes principaux domaines d’intérêt sont le machine learning, les algorithmes, les systèmes embarqués et l'informatique quantique, ainsi que le traitement de signal et les capteurs.",
-            projects: "Projets",
+            projects: "Projets personnels",
             projectsText: "Saviez-vous qu'en cliquant successivement sur le premier lien d'une page Wikipédia, vous " +
                 "finirez probablement sur l'article <a href=\"https://fr.wikipedia.org/wiki/Philosophie\" target=\"_blank\">Philosophie</a> ? " +
                 "Ce code automatise ce processus : entrez simplement une page Wikipédia, et il vous montrera le chemin vers la page Philosophie !",
