@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const translations = {
         en: {
             aboutHeader: "About",
-            projectsHeader: "Projects",
+            projectsHeader: "Personal projects",
             contactHeader: "Contact",
             hero: "David Gorgiev",
             about: "About me",
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         fr: {
             aboutHeader: "À propos",
-            projectsHeader: "Projets",
+            projectsHeader: "Projets personnels",
             contactHeader: "Contact",
             hero: "David Gorgiev",
             about: "À propos",
