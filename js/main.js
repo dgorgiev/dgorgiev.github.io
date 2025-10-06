@@ -26,9 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             aboutText1: "I’m a computer science student at <a href=\"https://www.epfl.ch\" target=\"_blank\">EPFL</a>.",
             interestIntro: "My main fields of interest are algorithms, machine learning, embedded systems and quantum technologies.",
             projects: "Personal projects",
-            projectsText: "Did you know that if you keep clicking the first link on a Wikipedia page, you'll most likely" +
-                " end up on the <a href=\"https://en.wikipedia.org/wiki/Philosophy\" target=\"_blank\">Philosophy</a> article? " +
-                "This code automates the process for you: just enter any Wikipedia page, and it will show you the path to the Philosophy page!",
+            projectsText: "A script written in scala that follows and prints the path from any wikipedia page to the <a href=\"https://en.wikipedia.org/wiki/Philosophy\" target=\"_blank\">Philosophy</a> page.",
             contact: "Contact & links",
             epflLink: "EPFL profile"
         },
@@ -41,9 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             aboutText1: "Je suis étudiant en informatique à <a href=\"https://www.epfl.ch\" target=\"_blank\">l'EPFL</a>.",
             interestIntro: "Mes principaux domaines d’intérêt sont les algorithmes, le machine learning, les systèmes embarqués et les technologies quantiques.",
             projects: "Projets personnels",
-            projectsText: "Saviez-vous qu'en cliquant successivement sur le premier lien d'une page Wikipédia, vous " +
-                "finirez probablement sur l'article <a href=\"https://fr.wikipedia.org/wiki/Philosophie\" target=\"_blank\">Philosophie</a> ? " +
-                "Ce code automatise ce processus : entrez simplement une page Wikipédia, et il vous montrera le chemin vers la page Philosophie !",
+            projectsText: "Un script écrit en scala qui suit et imprime le chemin d'accès depuis n'importe quelle page wikipedia jusqu'à la page <a href=\"https://en.wikipedia.org/wiki/Philosophy\" target=\"_blank\">Philosophy</a>.",
             contact: "Contact & liens",
             epflLink: "profil EPFL"
         }
