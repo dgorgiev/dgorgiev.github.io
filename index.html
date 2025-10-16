@@ -1,73 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David Gorgiev</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>David Gorgiev — Contact</title>
+    <meta name="description" content="Contact page with links to GitHub, LinkedIn, email, and EPFL profile." />
+    <meta property="og:title" content="David Gorgiev — Contact" />
+    <meta property="og:description" content="Get in touch and find my profiles: GitHub, LinkedIn, email, and EPFL." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <!-- Tiny emoji favicon as a data URL (standalone) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%93%A7%3C/text%3E%3C/svg%3E">
+    <style>
+        :root {
+            --bg: #0b1020;
+            --panel: #0f172a;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #0ea5e9;
+            --ring: rgba(14, 165, 233, 0.3);
+            --btn: #111827;
+            --link: #38bdf8;
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg: #f8fafc;
+                --panel: #ffffff;
+                --text: #0f172a;
+                --muted: #475569;
+                --accent: #0ea5e9;
+                --ring: rgba(14, 165, 233, 0.25);
+                --btn: #f1f5f9;
+                --link: #0284c7;
+            }
+        }
+
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+            Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            background: radial-gradient(1200px 800px at 80% -10%, rgba(14,165,233,0.12), transparent 60%),
+            radial-gradient(900px 700px at -10% 100%, rgba(99,102,241,0.10), transparent 60%),
+            var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            display: grid;
+            place-items: center;
+            padding: 2rem;
+        }
+
+        .card {
+            width: min(760px, 100%);
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)) , var(--panel);
+            border: 1px solid rgba(148,163,184,0.15);
+            border-radius: 20px;
+            padding: clamp(1.25rem, 2.5vw, 2rem);
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            inset: -40%;
+            background: radial-gradient(500px 350px at 20% 10%, rgba(14,165,233,0.15), transparent 60%),
+            radial-gradient(400px 300px at 80% 90%, rgba(16,185,129,0.12), transparent 60%);
+            filter: blur(20px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem 1.25rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .avatar {
+            width: 84px; height: 84px; border-radius: 18px;
+            background: linear-gradient(135deg, var(--accent), #22d3ee);
+            display: grid; place-items: center;
+            color: white; font-weight: 700; font-size: 32px;
+            box-shadow: 0 8px 20px var(--ring);
+            user-select: none;
+        }
+
+        h1 {
+            margin: 0; font-size: clamp(1.5rem, 2.8vw, 2rem); letter-spacing: -0.02em;
+        }
+        .subtitle { color: var(--muted); margin-top: .15rem; font-size: 0.98rem; }
+
+        .links {
+            margin-top: 1.25rem;
+            display: grid;
+            gap: .6rem;
+        }
+
+        .link-row {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: .9rem;
+            padding: .8rem 1rem;
+            border: 1px solid rgba(148,163,184,0.18);
+            border-radius: 14px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+            transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+        }
+        .link-row:hover { transform: translateY(-1px); border-color: rgba(148,163,184,0.32); box-shadow: 0 6px 14px rgba(2,6,23,0.25); }
+
+        .icon {
+            width: 22px; height: 22px; opacity: .9;
+        }
+
+        a.profile {
+            color: var(--text);
+            text-decoration: none;
+        }
+        a.profile b { color: var(--link); }
+        .muted { color: var(--muted); font-size: .95rem; }
+
+        .actions { display: flex; gap: .6rem; }
+        button, .btn {
+            cursor: pointer;
+            padding: .55rem .8rem;
+            border-radius: 10px;
+            border: 1px solid rgba(148,163,184,0.25);
+            background: var(--btn);
+            color: var(--text);
+            font-weight: 600;
+            transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+        }
+        button:hover, .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(2,6,23,0.25); border-color: rgba(148,163,184,0.35); }
+        .pill { font-size: .82rem; padding: .45rem .7rem; }
+
+        footer { margin-top: 1.4rem; color: var(--muted); font-size: .9rem; text-align: center; }
+        .dot { margin: 0 .35rem; opacity: .6; }
+
+        /* Small screens */
+        @media (max-width: 520px) {
+            header { grid-template-columns: 1fr; }
+            .avatar { width: 72px; height: 72px; font-size: 28px; }
+        }
+    </style>
+    <script>
+        function copyEmail() {
+            const email = document.getElementById('emailValue').textContent.trim();
+            navigator.clipboard.writeText(email).then(() => {
+                const toast = document.createElement('div');
+                toast.textContent = 'Email copied to clipboard';
+                toast.style.position = 'fixed';
+                toast.style.left = '50%';
+                toast.style.bottom = '24px';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.background = 'rgba(2,6,23,0.9)';
+                toast.style.color = 'white';
+                toast.style.padding = '10px 14px';
+                toast.style.borderRadius = '10px';
+                toast.style.boxShadow = '0 8px 20px rgba(2,6,23,0.35)';
+                toast.style.zIndex = '9999';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 1400);
+            });
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "David Gorgiev",
+            "email": "mailto:david.gorgiev@epfl.ch",
+            "url": "",
+            "sameAs": [
+                "https://github.com/dgorgiev",
+                "https://www.linkedin.com/in/david-gorgiev-39aabb217/",
+                "https://people.epfl.ch/david.gorgiev"
+            ]
+        }
+    </script>
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li><a href="#about" data-key="aboutHeader">About</a></li>
-            <li><a href="#projects" data-key="projectsHeader">Projects</a></li>
-            <li><a href="#contact" data-key="contactHeader">Contact</a></li>
-        </ul>
-    </nav>
-    <div id="lang-toggle">
-        <button id="lang-btn">FR</button>
-    </div>
-</header>
+<main class="card" role="main">
+    <div class="glow" aria-hidden="true"></div>
 
-<main>
-    <section id="hero" class="hero">
-        <h1>David Gorgiev</h1>
-    </section>
+    <header>
+        <div class="avatar" aria-hidden="true">DG</div>
+        <div>
+            <h1>David Gorgiev</h1>
+            <div class="subtitle">Computer Science @ EPFL — Get in touch and find my profiles below.</div>
+        </div>
+    </header>
 
-    <section id="about">
-        <h2 data-key="about">About me</h2>
-        <p data-key="aboutText1">I’m a computer science student at <a href="https://www.epfl.ch" target="_blank">EPFL</a>.</p>
-        <p>
-            <span data-key="interestIntro">My main fields of interest are algorithms, machine learning, embedded systems and quantum technologies.</span><br>
-        </p>
-    </section>
+    <section class="links" aria-label="Contact and profiles">
+        <!-- Email -->
+        <div class="link-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+                <path d="m22 8-10 6L2 8"/>
+            </svg>
+            <a class="profile" href="mailto:david.gorgiev@epfl.ch">
+                <div><b>Email</b><div id="emailValue" class="muted">david.gorgiev@epfl.ch</div></div>
+            </a>
+            <div class="actions">
+                <button class="pill" onclick="copyEmail()" title="Copy email">Copy</button>
+            </div>
+        </div>
 
+        <!-- GitHub -->
+        <div class="link-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.84 3.14 8.94 7.5 10.39.55.1.75-.24.75-.53 0-.26-.01-1.11-.02-2.02-3.05.66-3.69-1.31-3.69-1.31-.5-1.26-1.22-1.6-1.22-1.6-.99-.68.07-.67.07-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.67 2.58 1.19 3.21.91.1-.71.39-1.19.71-1.47-2.44-.28-5.01-1.22-5.01-5.43 0-1.2.43-2.17 1.13-2.94-.11-.28-.49-1.42.11-2.96 0 0 .92-.29 3.01 1.12.88-.25 1.82-.38 2.76-.38s1.88.13 2.76.38c2.09-1.41 3.01-1.12 3.01-1.12.6 1.54.22 2.68.11 2.96.7.77 1.13 1.74 1.13 2.94 0 4.22-2.58 5.15-5.03 5.43.4.34.76 1.02.76 2.05 0 1.48-.01 2.68-.01 3.05 0 .29.2.64.76.53 4.36-1.45 7.5-5.55 7.5-10.39C23.02 5.24 18.27.5 12 .5Z"/>
+            </svg>
+            <a class="profile" href="https://github.com/dgorgiev" target="_blank" rel="noopener">
+                <div><b>GitHub</b><div class="muted">github.com/dgorgiev</div></div>
+            </a>
+            <div class="actions">
+                <a class="btn pill" href="https://github.com/dgorgiev?tab=repositories" target="_blank" rel="noopener">Repos</a>
+            </div>
+        </div>
 
-    <section id="projects">
-        <h2 data-key="projects">Personal projects</h2>
-        <div class="project-card" data-link="https://github.com/dgorgiev/wiki-scrapper">
-                <h3>Wikipedia scraper</h3>
-            <p data-key="projectsText">A script written in scala that follows and prints the path from any wikipedia page to the <a href="https://en.wikipedia.org/wiki/Philosophy" target="_blank">Philosophy</a> page.</p>
+        <!-- LinkedIn -->
+        <div class="link-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h4v1.7h.06c.56-1.06 1.94-2.18 4-2.18 4.28 0 5.07 2.71 5.07 6.23V21h-4v-5.3c0-1.26-.02-2.88-1.76-2.88-1.76 0-2.03 1.37-2.03 2.78V21H9z"/>
+            </svg>
+            <a class="profile" href="https://www.linkedin.com/in/david-gorgiev-39aabb217/" target="_blank" rel="noopener">
+                <div><b>LinkedIn</b><div class="muted">linkedin.com/in/david-gorgiev-39aabb217</div></div>
+            </a>
+            <div class="actions">
+                <a class="btn pill" href="https://www.linkedin.com/in/david-gorgiev-39aabb217/details/experience/" target="_blank" rel="noopener">Experience</a>
+            </div>
+        </div>
+
+        <!-- EPFL profile -->
+        <div class="link-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <path d="M22 20H2"/>
+                <path d="M7 20V8l5-3 5 3v12"/>
+                <path d="M7 12h10"/>
+            </svg>
+            <a class="profile" href="https://people.epfl.ch/david.gorgiev" target="_blank" rel="noopener">
+                <div><b>EPFL Profile</b><div class="muted">people.epfl.ch/david.gorgiev</div></div>
+            </a>
+            <div class="actions">
+                <a class="btn pill" href="https://people.epfl.ch/search" target="_blank" rel="noopener">Search</a>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 data-key="contact">Contact & links</h2>
-        <p>
-            <img class="icon" src="assets/email.png" alt="e-mail" />
-            <a href="mailto:david.gorgiev@epfl.ch" target="_blank">david.gorgiev@epfl.ch</a>
-        </p>
-        <p>
-            <img class="icon" src="assets/linkedin.png" alt="LinkedIn" />
-            <a href="https://www.linkedin.com/in/david-gorgiev-39aabb217/" target="_blank">LinkedIn</a>
-        </p>
-        <p>
-            <img class="icon" src="assets/epfl.png" alt="EPFL" />
-            <a href="https://people.epfl.ch/david.gorgiev" target="_blank" data-key="epflLink">EPFL profile</a>
-        </p>
-        <p>
-            <img class="icon" src="assets/github.svg" alt="Github" />
-            <a href="https://github.com/dgorgiev" target="_blank">Github</a>
-        </p>
-    </section>
+    <footer>
+        <span>© <span id="year"></span> David Gorgiev</span>
+        <span class="dot">•</span>
+        <a href="mailto:david.gorgiev@epfl.ch" style="color:var(--link)">Contact</a>
+    </footer>
 </main>
 
-<footer>
-    <p>&copy; 2025 David Gorgiev</p>
-</footer>
-
-<script src="js/main.js"></script>
+<script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
