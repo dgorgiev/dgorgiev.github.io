@@ -174,7 +174,7 @@
     }
 
     // ----- Apply content -----
-    document.title = `${data.profile.name} — Portfolio`;
+    document.title = `${data.profile.name}`;
     document.getElementById("name").textContent = data.profile.name;
     document.getElementById("about").textContent = data.profile.about;
 
