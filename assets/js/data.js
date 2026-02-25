@@ -6,15 +6,15 @@ window.SITE_DATA = {
         name: "David Gorgiev",
         links: [
             // Rendered as: email · github · linkedin · cv
-            { label: "email", url: "mailto:david.gorgiev@epfl.ch" },
-            { label: "github", url: "https://github.com/dgorgiev" },
-            { label: "linkedin", url: "https://www.linkedin.com/in/dgorgiev/" }
+            { label: "david.gorgiev@epfl.ch", url: "mailto:david.gorgiev@epfl.ch" },
+            { label: "GitHub", url: "https://github.com/dgorgiev" },
+            { label: "LinkedIn", url: "https://www.linkedin.com/in/dgorgiev/" }
             //{ label: "cv", url: "assets/YourName_CV.pdf" } // add the PDF file if you want
         ],
         about:
             "My primary interests lie in computer architecture, signal processing, " +
             "and machine learning, particularly for domains such as space systems, quantum computing, and " +
-            "medical imaging. I work across the stack from FPGA and embedded system design to " +
+            "biomedical technologies. I work across the stack from FPGA and embedded system design to " +
             "data-driven modeling."
     },
 
@@ -24,14 +24,14 @@ window.SITE_DATA = {
             institution: "EPFL",
             degree: "BSc Computer Science",
             date: "2022 - 2026",
-            text: "GPA: 5.xx/6.00"
-        },
-        {
-            institution: "EPFL",
-            degree: "MSc Electrical and Electronics Engineering",
-            date: "2026 - 2028",
-            text: "Specialization in Information Technologies and Signal Processing"
+            text: "GPA: 5.12/6.00"
         }
+        //{
+        //    institution: "EPFL",
+        //    degree: "MSc Electrical and Electronics Engineering",
+        //    date: "2026 - 2028",
+        //    text: "Specialization in Information Technologies and Signal Processing"
+        //}
     ],
 
     experience: [
@@ -40,9 +40,9 @@ window.SITE_DATA = {
             org: "EPFL Spacecraft Team",
             date: "Feb 2026 - Present",
             bullets: [
-                "Implemented core services of the Flight Software: telecommand handling and scheduling, command execution, internal communication protocol; using C++ and NASA’s F Prime framework.",
-                "Developed critical software robust against errors caused by radiations.",
-                "Collaborated with ESA experts through Fly Your Satellite Design Booster program and passed all design reviews."
+                "Implementing core services of the Flight Software: telecommand handling and scheduling, command execution, internal communication protocol; using C++ and NASA’s F Prime framework.",
+                "Developing critical software robust against errors caused by radiations.",
+                "Collaborating with ESA experts through Fly Your Satellite Design Booster program and passed all design reviews."
             ]
         }
     ],
@@ -54,8 +54,8 @@ window.SITE_DATA = {
             date: "Feb 2026 - Present",
             bullets: [
                 "Mapping and scheduling quantum circuits on distributed cores with logical qubits encoded using surface code.",
-                "Ameliorated routing algorithm of qubits during execution.",
-                "Benchmarked using STIM."
+                "Improve routing algorithm of qubits during execution.",
+                "Simulation and benchmarking using STIM."
             ]
         }
     ],
@@ -70,7 +70,7 @@ window.SITE_DATA = {
             ],
             bullets: [
                 "Built a JavaFX desktop application that slices 3D models into LEGO-compatible instructions.",
-                "Implemented custom firmware stack that coordinates motion control, brick dispensing, and precise placement",
+                "Implemented custom firmware stack that coordinates motion control, brick dispensing, and precise placement.",
                 "Designed a dual-microcontroller architecture separating real-time motor control from high-level logic and sensing to ensure reliability and extensibility. "
             ]
         },
@@ -114,7 +114,7 @@ window.SITE_DATA = {
             date: "Oct 2024",
             skills: ["Verilog", "x86 Assembly", "Linux"],
             bullets: [
-                "Implemented an x86 RISC-V processor in Verilog and assembly including instruction ",
+                "Implemented an x86 RISC-V processor in Verilog and assembly supporting instructions parsing, scheduling, execution and interrupts.",
                 "Verified correctness using assembly tests, testbench, and waveform debugging."
             ]
         }
@@ -123,8 +123,8 @@ window.SITE_DATA = {
     technicalSkills: [
         { label: "Languages", items: ["Java", "Scala", "C++, Python, C, Verilog, Assembly"] },
         { label: "Libraries", items: ["PyTorch, Qiskit, QuTiP, NumPy, SciPy"] },
-        { label: "Frameworks", items: ["F'"] },
-        { label: "Tools", items: ["Git, Fusion 360, Vivado, STIM"] },
+        { label: "Frameworks", items: ["F Prime"] },
+        { label: "Tools", items: ["Git, Fusion 360, Vivado, STIM, Wireshark"] },
         { label: "Platforms", items: ["Linux"] }
     ],
 
