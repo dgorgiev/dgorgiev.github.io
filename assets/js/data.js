@@ -12,10 +12,7 @@ window.SITE_DATA = {
             //{ label: "cv", url: "assets/YourName_CV.pdf" } // add the PDF file if you want
         ],
         about:
-            "My primary interests lie in computer architecture, signal processing, " +
-            "and machine learning, particularly for domains such as space systems, quantum computing, and " +
-            "biomedical technologies. I work across the stack from FPGA and embedded system design to " +
-            "data-driven modeling."
+            "."
     },
 
 
