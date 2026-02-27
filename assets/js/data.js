@@ -12,7 +12,7 @@ window.SITE_DATA = {
             //{ label: "cv", url: "assets/YourName_CV.pdf" } // add the PDF file if you want
         ],
         about:
-            "."
+            "I'm a computer science student at EPFL. My interest and work spans computer architecture, quantum computing, signal processing and machine learning."
     },
 
 
