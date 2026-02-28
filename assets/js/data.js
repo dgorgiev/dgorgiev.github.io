@@ -116,14 +116,14 @@ window.SITE_DATA = {
                 { label: "link", url: "https://github.com/dgorgiev/risc-v-sim" }
             ],
             bullets: [
-                "Implemented an x86 RISC-V processor in Verilog and assembly supporting instructions parsing, scheduling, execution and interrupts.",
+                "Implemented an x86 RISC-V CPU in Verilog and assembly supporting instructions parsing, scheduling, execution and interrupts.",
                 "Verified correctness using assembly tests, testbench, and waveform debugging."
             ]
         }
     ],
 
     technicalSkills: [
-        { label: "Languages", items: ["Python", "C", "C++, Java, Scala, Verilog, Assembly"] },
+        { label: "Languages", items: ["Python", "C", "C++, Java, Scala, Verilog, Assembly, SQL"] },
         { label: "Libraries", items: ["PyTorch, Qiskit, QuTiP, NumPy, SciPy"] },
         { label: "Frameworks", items: ["F Prime"] },
         { label: "Tools", items: ["Git, Fusion 360, STIM, Wireshark"] },
