@@ -76,7 +76,7 @@ window.SITE_DATA = {
             date: "Oct 2025",
             skills: ["Qiskit", "Python", "Quantum ML"],
             links: [
-                { label: "link", url: "https://github.com/your-username/rna-folding-genq2025" }
+                { label: "link", url: "https://github.com/dgorgiev/rna-folding-genq2025" }
             ],
             bullets: [
                 "Built a hybrid quantum-classical pipeline integrating quantum sampling running on IonQ quantum computer, using Python, Qiskit, and ViennaRNA.",
@@ -100,6 +100,9 @@ window.SITE_DATA = {
             title: "Distributed Storage System",
             date: "Feb 2025 - May 2025",
             skills: ["C", "Network protocols"],
+            links: [
+                { label: "link", url: "https://github.com/dgorgiev/dkvs-storage" }
+            ],
             bullets: [
                 "Implemented a distributed key-value storage system in C, utilizing UDP for network communication.",
                 "Implemented rapid parallel data queries and insertions across multiple servers, ensuring reliability through a majority voting consensus algorithm."
@@ -109,6 +112,9 @@ window.SITE_DATA = {
             title: "RISC-V Processor Design",
             date: "Oct 2024",
             skills: ["Verilog", "x86 Assembly", "Linux"],
+            links: [
+                { label: "link", url: "https://github.com/dgorgiev/risc-v-sim" }
+            ],
             bullets: [
                 "Implemented an x86 RISC-V processor in Verilog and assembly supporting instructions parsing, scheduling, execution and interrupts.",
                 "Verified correctness using assembly tests, testbench, and waveform debugging."
