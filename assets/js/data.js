@@ -66,8 +66,8 @@ window.SITE_DATA = {
                 { label: "link", url: "https://github.com/epfl-cs358/2025fa-mklego" }
             ],
             bullets: [
-                "Built a JavaFX desktop application that slices 3D models into LEGO-compatible instructions.",
-                "Implemented custom firmware stack that coordinates motion control, brick dispensing, and precise placement.",
+                "Built a Java desktop application that automatically slices any 3D models into LEGO structure and generates a custom gcode for instructions to the printer.",
+                "Implemented C++  firmware stack that coordinates motor control, brick dispensing, and precise placement.",
                 "Designed a dual-microcontroller architecture separating real-time motor control from high-level logic and sensing to ensure reliability and extensibility. "
             ]
         },
@@ -75,13 +75,12 @@ window.SITE_DATA = {
             title: "RNA Folding with Quantum ML | Hackathon at CERN",
             date: "Oct 2025",
             skills: ["Qiskit", "Python", "Quantum ML"],
-            //links: [
-            //    { label: "link", url: "https://github.com/your-username/rna-folding" }
-            //],
+            links: [
+                { label: "link", url: "https://github.com/your-username/rna-folding-genq2025" }
+            ],
             bullets: [
                 "Built a hybrid quantum-classical pipeline integrating quantum sampling running on IonQ quantum computer, using Python, Qiskit, and ViennaRNA.",
-                "Analyzed thousands of quantum samples to extract and rank the most energetically optimal RNA configurations.",
-                "Collaborated with researchers, engineers, and entrepreneurs, enhancing skills in quantum computing, optimization, bioinformatics, scientific Python development, and startup innovation."
+                "Analyzed thousands of quantum samples to extract and ranked the most energetically optimal RNA configurations."
             ]
         },
         {
@@ -93,8 +92,8 @@ window.SITE_DATA = {
             ],
             bullets: [
                 "Implemented core ML algorithms – Logistic Regression, KNN, and K-Means Clustering – to predict heart disease levels using a real-world medical dataset (297 patients, 13 features).",
-                "Achieved strong test accuracy through hyperparameter tuning and feature normalization.",
-                "Designed and trained deep learning models (MLP and CNN) with PyTorch for image-based skin lesion classification using the DermaMNIST dataset (9,012 images across 7 categories). Optimized architectures and learning rates to improve diagnostic accuracy and F1-score."
+                "Designed and trained deep learning models (MLP and CNN) using PyTorch for image-based skin lesion classification using the DermaMNIST dataset (9,012 images across 7 categories).",
+                "Achieved strong test accuracy through hyperparameter tuning and feature normalization. Optimized architectures and learning rates to improve diagnostic accuracy and F1-score."
             ]
         },
         {
@@ -118,10 +117,10 @@ window.SITE_DATA = {
     ],
 
     technicalSkills: [
-        { label: "Languages", items: ["Java", "Scala", "C++, Python, C, Verilog, Assembly"] },
+        { label: "Languages", items: ["Python", "C", "C++, Java, Scala, Verilog, Assembly"] },
         { label: "Libraries", items: ["PyTorch, Qiskit, QuTiP, NumPy, SciPy"] },
         { label: "Frameworks", items: ["F Prime"] },
-        { label: "Tools", items: ["Git, Fusion 360, Vivado, STIM, Wireshark"] },
+        { label: "Tools", items: ["Git, Fusion 360, STIM, Wireshark"] },
         { label: "Platforms", items: ["Linux"] }
     ],
 
