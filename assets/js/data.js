@@ -37,9 +37,9 @@ window.SITE_DATA = {
             org: "EPFL Spacecraft Team",
             date: "Feb 2026 - Present",
             bullets: [
-                "Implementing core services of the Flight Software: telecommand handling and scheduling, command execution, internal communication protocol; using C++ and NASA’s F Prime framework.",
-                "Developing critical software robust against errors caused by radiations.",
-                "Collaborating with ESA experts through Fly Your Satellite Design Booster program and passed all design reviews."
+                "Implement services of the on-board computer (Linux) of a 3U CubeSat launching in 2027 in collaboration with ESA.",
+                "Design and implement telecommands scheduling and execution in C++ with F prime framework.",
+                "Collaborate with other poles to coordinate work and communicate architecture decisions."
             ]
         }
     ],
@@ -51,8 +51,8 @@ window.SITE_DATA = {
             date: "Feb 2026 - Present",
             bullets: [
                 "Mapping and scheduling quantum circuits on distributed cores with logical qubits encoded using surface code.",
-                "Improve routing algorithm of qubits during execution.",
-                "Simulation and benchmarking using STIM."
+                "Improve qubit fidelity at runtime by introducing a graph algorithm that routes qubits based on most reliable path.",
+                "Analyze and compare complexity and gains of algorithms. Simulate circuits using STIM, in C++ and Python."
             ]
         }
     ],
@@ -66,9 +66,9 @@ window.SITE_DATA = {
                 { label: "link", url: "https://github.com/epfl-cs358/2025fa-mklego" }
             ],
             bullets: [
-                "Built a Java desktop application that automatically slices any 3D models into LEGO structure and generates a custom gcode for instructions to the printer.",
-                "Implemented C++  firmware stack that coordinates motor control, brick dispensing, and precise placement.",
-                "Designed a dual-microcontroller architecture separating real-time motor control from high-level logic and sensing to ensure reliability and extensibility. "
+                "Developed firmware in C++ for a dual-microcontroller architecture (Arduino Mega + ESP32-S3) with real-time motor control, sensor integration, and a custom inter-device communication protocol ensuring synchronized, reliable operation.",
+                "Integrated and orchestrated heterogeneous hardware components (stepper motors, servo, IR sensors, dispensers, power systems), implementing calibration, and fault-tolerant control.",
+                "Built a Java desktop app that slices any 3D model into LEGO pieces and generates a custom G-code to feed control instructions to the printer."
             ]
         },
         {
@@ -116,8 +116,8 @@ window.SITE_DATA = {
                 { label: "link", url: "https://github.com/dgorgiev/risc-v-sim" }
             ],
             bullets: [
-                "Implemented an x86 RISC-V CPU in Verilog and assembly supporting instructions parsing, scheduling, execution and interrupts.",
-                "Verified correctness using assembly tests, testbench, and waveform debugging."
+                "Implemented a RISC-V CPU using Verilog and assembly supporting instruction parsing, scheduling, execution, and interrupts.",
+                "Written 100+ testbenches with SystemVerilog, assembly and GTKWave to debug and test edge cases."
             ]
         }
     ],
