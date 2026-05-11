@@ -39,13 +39,16 @@
 
         (links || []).forEach((l, i) => {
             if (i > 0) items.push(el("span", { class: "sep", text: "·" }));
+            const url = l.url || "";
             items.push(
-                el("a", {
-                    href: safeUrl(l.url),
-                    text: l.label,
-                    target: l.url.startsWith("http") ? "_blank" : null,
-                    rel: l.url.startsWith("http") ? "noopener noreferrer" : null
-                })
+                url
+                    ? el("a", {
+                        href: safeUrl(url),
+                        text: l.label,
+                        target: url.startsWith("http") ? "_blank" : null,
+                        rel: url.startsWith("http") ? "noopener noreferrer" : null
+                    })
+                    : el("span", { text: l.label })
             );
         });
 

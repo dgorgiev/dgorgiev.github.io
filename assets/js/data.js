@@ -6,13 +6,13 @@ window.SITE_DATA = {
         name: "David Gorgiev",
         links: [
             // Rendered as: email · github · linkedin · cv
-            { label: "david.gorgiev@epfl.ch", url: "mailto:david.gorgiev@epfl.ch" },
+            { label: "david [dot] gorgiev [at] epfl [dot] ch", url: "" },
             { label: "GitHub", url: "https://github.com/dgorgiev" },
             { label: "LinkedIn", url: "https://www.linkedin.com/in/dgorgiev/" }
             //{ label: "cv", url: "assets/YourName_CV.pdf" } // add the PDF file if you want
         ],
         about:
-            "I'm a computer science student at EPFL. My interest and work spans computer architecture, quantum computing, signal processing and machine learning."
+            "I'm a computer science student at EPFL. My interest and work spans signal processing, machine learning, embedded systems, and quantum computing."
     },
 
 
