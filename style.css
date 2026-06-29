@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(255, 255, 255);
+    font-family:"Helvetica Neue";
+    color:black;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 30px;
+}
+h1{
+    text-align: center;
+    font-size: 75px;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-top: 60px;
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.icon-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.icon-container img:nth-child(2) {
+    display: none;
+}
+
+.icon-container:hover img:nth-child(1) {
+    display: none;
+}
+
+.icon-container:hover img:nth-child(2) {
+    display: block;
+}
