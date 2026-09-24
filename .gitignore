@@ -1,6 +1,6 @@
-# macOS
-.DS_Store
-
-# JetBrains/WebStorm IDE
-.idea/
-*.iml
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+_site
+Gemfile.lock
