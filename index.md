@@ -1,30 +1,57 @@
 ---
 layout: default
-title: Hello
+title: Home
 ---
 
 
-## An easy to use, minimal, text focused Jekyll theme
+## About me
 
-[Bear Blog](https://bearblog.dev/) is *"a blogging platform where words matter most"*. 
+I am a computer science student at EPFL.
 
-This is a port of it's theme to Jekyll, with some tweaks. So you can use GitHub Pages to host your blog while getting the same awesome Bear Blog feels.
+My main interest and work span signal processing, machine learning, embedded systems and high-performance computing.
 
-**Stop worrying about the style, focus on your writing.**
+My broader interests include maker prototyping, robotics, imaging, space applications, quantum computing or anything physics-related.
 
-- Looks great on *any* device
-- Tiny, optimized, and awesome pages
-- No trackers, ads, or scripts, *did I mention minimal already?*
-- Auto light and dark themes
-- Tag support, to filter blog pages
-- Quick, *15 minute* setup
-- Gallery view for your images
-- Code highlighting
+<br>
 
-Have a look around, this website is already themed with **jekyllBear**. If you like it, head over to the GitHub [repository](https://github.com/knhash/jekyllBear) for installation instructions.
+## Experience
 
-#### New: Life in Weeks Interactive Timeline
+### Current
 
-- Visualize your life weeks, inspired by [Wait But Why](https://waitbutwhy.com/2014/05/life-weeks.html) and [Buster Benson](https://busterbenson.com/life-in-weeks/) and cycle through key events with up/down arrows.
+<ul class="experience-timeline">
+  <li>
+    <span class="experience-date">Since Sep 2026</span>
+    <span><strong>Decoding Engineer</strong> at <a href="https://epfl-npulse.ch/" target="_blank" rel="noopener noreferrer">EPFL N-Pulse</a></span>
+  </li>
+  <li>
+    <span class="experience-date">Since Feb 2026</span>
+    <span><strong>Flight Software Engineer</strong> at <a href="https://www.epflspacecraftteam.ch/" target="_blank" rel="noopener noreferrer">EPFL Spacecraft Team</a></span>
+  </li>
+</ul>
 
-Try it on the [Life in Weeks](https://knhash.in/jekyllBear/life) page!
+### Previous
+
+<ul class="experience-timeline">
+  <li>
+    <span class="experience-date">Jul &ndash; Sep 2026</span>
+    <span><strong>Software Engineering Intern</strong> at <a href="https://imperix.com/" target="_blank" rel="noopener noreferrer">imperix</a></span>
+  </li>
+</ul>
+
+<br>
+
+## Some recent projects
+
+### EPFL Course Planner (<a href="https://www.epflcourseplanner.ch" target="_blank">epflcourseplanner.ch</a>)
+
+I developed a tool that helped me plan my master's curriculum, and decided to make it publicly available in the form of a website.
+
+In only 1.5 months, over 2'000 students used it to plan their studies at EPFL. Cool!
+
+### Adaptive Qubit Routing for Noisy Quantum Hardware (<a href="https://github.com/dgorgiev/qubit-routing" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="{{ '/assets/David_Gorgiev_Bachelor_Thesis.pdf' | relative_url }}" target="_blank">pdf</a>)
+
+Under the supervision of Prof. Edoardo Charbon at the <a href="https://www.epfl.ch/labs/aqua/" target="_blank" rel="noopener noreferrer">
+Advanced Quantum Architecture Lab</a>, I worked on distributed surface code architectures. I developed an adaptive qubit routing algorithm leveraging error syndromes
+to avoid noisy hardware regions at runtime, improving circuit execution fidelity by up to 60.2%.
+
+That was fun!

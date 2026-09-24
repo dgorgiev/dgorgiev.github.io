@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    
 <header>
     <h2 class="title">{{ site.title }}</h2>
-    <nav>
+    <nav aria-label="Contact links">
         <p>
-            <a href="{{ site.url }}">Home</a> 
-            <a href="{{ site.url }}{{ site.Blog }}">Blog</a>
-            <a href="{{ site.url }}{{ site.Life }}">Life</a>
-        
-            {% for link in site.links %}
-                <a href="{{ site.url }}{{ link[1] }}">{{ link[0] }}</a>
-            {% endfor %}
-            
-            {% for link in site.special_links %}
-                    <a href="{{ link[1] }}">[{{ link[0] }}]</a>
-            {% endfor %}
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/dgorgiev">GitHub</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dgorgiev">LinkedIn</a>
+            <a href="mailto:david.gorgiev@epfl.ch">david.gorgiev@epfl.ch</a>
         </p>
     </nav>
 </header>

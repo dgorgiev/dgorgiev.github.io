@@ -1,5 +1,5 @@
 /* =============================================================================
-   JEKYLL BEAR THEME - PINE FOREST AESTHETIC
+   JEKYLL BEAR THEME - BLUE PALETTE
    ============================================================================= */
 /* =============================================================================
    FONTS & IMPORTS
@@ -18,7 +18,6 @@
     /* Typography */
     --font-main: 'IBM Plex Mono', monospace;
     --font-secondary: 'IBM Plex Mono', monospace;
-    --font-monospace: 'IBM Plex Mono', monospace;
     --font-scale: 0.9em;
     
     /* Spacing */
@@ -26,57 +25,33 @@
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 40px;
-    --spacing-xl: 60px;
-    
-    /* Border radius */
-    --radius-sm: 3px;
-    --radius-md: 5px;
     
     /* Transitions */
     --transition-fast: 0.2s;
-    --transition-normal: 0.3s;
     
-    /* Z-index scale */
-    --z-dropdown: 200;
-    --z-modal: 1000;
-    
-    /* Pine Forest Theme Colors - Light Mode */
-    --background-color: #F5F7F3; /* Light pine needle mist */
-    --heading-color: #1A3025; /* Deep forest green */
-    --text-color: #0F2018; /* Dark pine shadow */
-    --link-color: #2D5016; /* Forest moss */
-    --visited-color: #1E3A11; /* Deep woodland */
-    --main-color: #4A7C59; /* Pine needle green */
-    --code-background-color: #E8EDEA; /* Frosted pine */
-    --code-color: #1A3025; /* Deep forest green */
-    --blockquote-color: #7A9B85; /* Sage green */
+    /* Blue theme */
+    --background-color: #FFFFFF;
+    --heading-color: #081F3D;
+    --text-color: #102A43;
+    --link-color: #0B3A82;
+    --visited-color: #312E81;
+    --main-color: #1E3A8A;
+    --muted-color: #5277A8;
     
     /* Interactive colors derived from theme */
-    --hover-color: white;
-    --border-color: var(--blockquote-color);
-    --shadow-color: rgba(0, 0, 0, 0.18);
-    
-    /* Glow effects for interactive elements */
-    --glow-color-light: rgba(45, 80, 22, 0.3);
-    --glow-color-medium: rgba(45, 80, 22, 0.5);
+    --border-color: var(--muted-color);
 }
 
-/* Dark Mode Color Overrides */
+/* Follow the operating system's dark appearance setting. */
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #0D1B12; /* Dark pine shadow */
-        --heading-color: #C8D8CE; /* Light pine mist */
-        --text-color: #E0EADE; /* Pale forest light */
-        --link-color: #7AB069; /* Bright moss green */
-        --visited-color: #9BC490; /* Light woodland */
-        --main-color: #8BB899; /* Soft pine green */
-        --code-background-color: #1A2B1F; /* Dark evergreen */
-        --code-color: #C8D8CE; /* Light pine mist */
-        --blockquote-color: #4A6B52; /* Forest undergrowth */
-        
-        /* Dark mode glow effects */
-        --glow-color-light: rgba(122, 176, 105, 0.3);
-        --glow-color-medium: rgba(122, 176, 105, 0.5);
+        --background-color: #071426;
+        --heading-color: #E6EFFC;
+        --text-color: #D4E2F4;
+        --link-color: #7EB6FF;
+        --visited-color: #A5B4FC;
+        --main-color: #4F8DD8;
+        --muted-color: #7196C2;
     }
 }
 
@@ -124,9 +99,10 @@ a {
     transition: all var(--transition-fast) ease;
 }
 
-a:hover {
+a:hover,
+a:visited:hover {
     background-color: var(--main-color);
-    color: var(--hover-color);
+    color: #FFFFFF;
     text-decoration: none;
 }
 
@@ -135,17 +111,16 @@ a:visited {
 }
 
 /* External link marker */
-a[href^="http"]:where(:not([href*="knhash.in/"])):not(:has(img))::after {
+a[href^="http"]::after {
     content: "↗";
-    font-family: var(--font-monospace);
 }
 
 .title:hover {
     text-decoration: none;
 }
 
-.title h1 {
-    font-size: 1.5em;
+.title {
+    font-size: 2.0em;
 }
 
 /* =============================================================================
@@ -173,162 +148,33 @@ footer {
     text-align: center;
 }
 
-footer > span:has(a[href="https://bearblog.dev"]) {
-    display: none;
-}
-
 /* =============================================================================
-   CONTENT ELEMENTS
+   EXPERIENCE TIMELINE
    ============================================================================= */
 
-hr {
-    border: 0;
-    border-top: 1px dashed var(--border-color);
+ul.experience-timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-img {
-    max-width: 100%;
-}
-
-blockquote {
-    border-left: 1px solid var(--blockquote-color);
-    color: var(--code-color);
-    padding-left: var(--spacing-md);
-    font-style: italic;
-}
-
-/* =============================================================================
-   CODE & SYNTAX HIGHLIGHTING
-   ============================================================================= */
-
-code {
-    font-family: var(--font-monospace);
-    padding: 2px;
-    background-color: var(--code-background-color);
-    color: var(--code-color);
-    border-radius: var(--radius-sm);
-}
-
-.highlight,
-.code {
-    padding: 1px 15px;
-    background-color: var(--code-background-color);
-    color: var(--code-color);
-    border-radius: var(--radius-sm);
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    overflow-x: auto;
-}
-
-/* =============================================================================
-   TABLES
-   ============================================================================= */
-
-table {
-    width: 100%;
-    border-spacing: 0;
-}
-
-th, td {
-    padding: 6px 13px;
-    border: 1px solid var(--border-color);
-    font-size: 1em;
-}
-
-/* =============================================================================
-   BLOG POST LISTINGS
-   ============================================================================= */
-
-ul.blog-posts {
-    list-style-type: none;
-    padding: unset;
-}
-
-ul.blog-posts li {
+ul.experience-timeline li {
     display: flex;
     margin-bottom: var(--spacing-sm);
 }
 
-ul.blog-posts li span {
-    flex: 0 0 130px;
+.experience-date {
+    flex: 0 0 150px;
+    color: var(--muted-color);
 }
 
-ul.blog-posts li a:visited {
-    color: var(--visited-color);
+@media (max-width: 560px) {
+    ul.experience-timeline li {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .experience-date {
+        flex-basis: auto;
+    }
 }
-
-i time {
-    font-style: normal;
-    opacity: 0.7;
-}
-
-/* =============================================================================
-   UTILITY CLASSES
-   ============================================================================= */
-
-.inline {
-    width: auto !important;
-}
-
-button {
-    margin: 0;
-    cursor: pointer;
-}
-
-/* =============================================================================
-   FORM ELEMENTS
-   ============================================================================= */
-
-input, button, textarea, select {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font: inherit;
-}
-
-legend {
-    margin: var(--spacing-md) 0;
-    font-weight: bold;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input, textarea {
-    margin: 0 0 var(--spacing-sm);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    color: var(--text-color);
-    background: var(--code-background-color);
-    border: 2px solid var(--link-color);
-    border-radius: var(--radius-md);
-}
-
-input {
-    width: 55%;
-}
-
-textarea {
-    width: 95%;
-}
-
-input[type=button], 
-input[type=submit], 
-input[type=reset] {
-    margin: 0 0 var(--spacing-md);
-    padding: 7px;
-    font-family: var(--font-secondary);
-    font-weight: bold;
-    color: var(--background-color);
-    background: var(--link-color);
-    border-radius: var(--radius-md);
-    cursor: pointer;
-}
-
-::placeholder {
-    color: var(--text-color);
-    opacity: 0.7;
-}
-      
-  
