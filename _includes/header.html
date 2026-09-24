@@ -1,10 +1,19 @@
 <header>
-    <h2 class="title">{{ site.title }}</h2>
-    <nav aria-label="Contact links">
-        <p>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/dgorgiev">GitHub</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dgorgiev">LinkedIn</a>
-            <a href="mailto:david.gorgiev@epfl.ch">david.gorgiev@epfl.ch</a>
-        </p>
-    </nav>
+    <div class="header-intro">
+        <div class="header-text">
+            <h2 class="title">{{ site.title }}</h2>
+            <nav aria-label="Contact links">
+                <p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/dgorgiev">GitHub</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dgorgiev">LinkedIn</a>
+                    <a href="mailto:david.gorgiev@epfl.ch">david.gorgiev@epfl.ch</a>
+                </p>
+            </nav>
+        </div>
+        <img
+            class="profile-picture"
+            src="{{ '/assets/profile-picture.jpg' | relative_url }}"
+            alt="Portrait of David Gorgiev"
+        >
+    </div>
 </header>
