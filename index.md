@@ -16,7 +16,6 @@ My broader interests include maker prototyping, robotics, imaging, space applica
 
 ## Experience
 
-### Current
 
 <ul class="experience-timeline">
   <li>
@@ -27,11 +26,6 @@ My broader interests include maker prototyping, robotics, imaging, space applica
     <span class="experience-date">Since Feb 2026</span>
     <span><strong>Flight Software Engineer</strong> at <a href="https://www.epflspacecraftteam.ch/" target="_blank" rel="noopener noreferrer">EPFL Spacecraft Team</a></span>
   </li>
-</ul>
-
-### Previous
-
-<ul class="experience-timeline">
   <li>
     <span class="experience-date">Jul &ndash; Sep 2026</span>
     <span><strong>Software Engineering Intern</strong> at <a href="https://imperix.com/" target="_blank" rel="noopener noreferrer">imperix</a></span>
