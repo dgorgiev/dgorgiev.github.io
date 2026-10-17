@@ -8,9 +8,7 @@ title: Home
 
 I am a computer science student at EPFL.
 
-My main interest and work span signal processing, machine learning, embedded systems and high-performance computing.
-
-My broader interests include maker prototyping, robotics, imaging, space applications, quantum computing or anything physics-related.
+My main interest and work span signal processing, machine learning, and embedded systems.
 
 <br>
 
@@ -20,7 +18,7 @@ My broader interests include maker prototyping, robotics, imaging, space applica
 <ul class="experience-timeline">
   <li>
     <span class="experience-date">Since Sep 2026</span>
-    <span><strong>Decoding Engineer</strong> at <a href="https://epfl-npulse.ch/" target="_blank" rel="noopener noreferrer">EPFL N-Pulse</a></span>
+    <span><strong>Machine learning Engineer</strong> at <a href="https://epfl-npulse.ch/" target="_blank" rel="noopener noreferrer">EPFL N-Pulse</a></span>
   </li>
   <li>
     <span class="experience-date">Since Feb 2026</span>
