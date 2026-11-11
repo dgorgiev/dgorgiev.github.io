@@ -38,7 +38,7 @@ My main interest and work span signal processing, machine learning, and embedded
 
 I developed a tool that helped me plan my master's curriculum, and decided to make it publicly available in the form of a website.
 
-In only 1.5 months, over 2'000 students used it to plan their studies at EPFL. Cool!
+In only 1.5 months, over 2'000 students used it to plan their studies at EPFL.
 
 ### Adaptive Qubit Routing for Noisy Quantum Hardware (<a href="https://github.com/dgorgiev/qubit-routing" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="{{ '/assets/David_Gorgiev_Bachelor_Thesis.pdf' | relative_url }}" target="_blank">pdf</a>)
 
@@ -46,4 +46,3 @@ Under the supervision of Prof. Edoardo Charbon at the <a href="https://www.epfl.
 Advanced Quantum Architecture Lab</a>, I worked on distributed surface code architectures. I developed an adaptive qubit routing algorithm leveraging error syndromes
 to avoid noisy hardware regions at runtime, improving circuit execution fidelity by up to 60.2%.
 
-That was fun!
